@@ -63,7 +63,7 @@ To stage the interaction with your interactive device, think about:
 
 
 _Setting:_
-This interaction takes place while speaker in participating in video call as well as addressing people in person. For example Professor Judy in IDD classes.
+This interaction takes place while speaker in participating in video call as well as addressing people in person. For example Professor Wendy in IDD classes.
 
 _Players:_
 The actors involved in this interaction would be the person giving presentation or lecture and other participants joining through zoom call.
