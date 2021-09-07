@@ -76,7 +76,6 @@ Participants want to ask questions to the Presenter, but as presenter has 2 sets
 _Goals:_ 
 Presenter should be able to notice question on Zoom and accept them.
 
-Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
 
 \*\***Include a picture of your storyboard here**\*\*
 
@@ -84,7 +83,8 @@ Sketch a storyboard of the interactions you are planning. It does not need to be
 
 
 \*\***Summarize feedback you got here.**\*\*
-ALl my group members liked the idea and found it useful to get attention of presenter. they also suggested using light flashing inplace of sound so that the presenter is not disturbed while speaking.
+
+All my group members liked the idea and found it useful to get attention of presenter. they also suggested using light flashing inplace of sound so that the presenter is not disturbed while speaking.
 
 ## Part B. Act out the Interaction
 
