@@ -58,26 +58,33 @@ Labs are due on Mondays. Make sure this page is linked to on your main class hub
 
 To stage the interaction with your interactive device, think about:
 
-_Setting:_ Where is this interaction happening? (e.g., a jungle, the kitchen) When is it happening?
-
-_Players:_ Who is involved in the interaction? Who else is there? If you reflect on the design of current day interactive devices like the Amazon Alexa, it’s clear they didn’t take into account people who had roommates, or the presence of children. Think through all the people who are in the setting.
-
-_Activity:_ What is happening between the actors?
-
-_Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening the fridge). 
-
-The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
 
 \*\***Describe your setting, players, activity and goals here.**\*\*
+
+
+_Setting:_
+This interaction takes place while speaker in participating in video call as well as addressing people in person. For example Professor Judy in IDD classes.
+
+_Players:_
+The actors involved in this interaction would be the person giving presentation or lecture and other participants joining through zoom call.
+    1. Presenter
+    2. Participants
+
+_Activity:_ 
+Participants want to ask questions to the Presenter, but as presenter has 2 sets of audience its difficult to makeout if there are any questions
+
+_Goals:_ 
+Presenter should be able to notice question on Zoom and accept them.
 
 Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
 
 \*\***Include a picture of your storyboard here**\*\*
 
-Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
+![alt text](https://github.com/sauravpanda24/Interactive-Lab-Hub/blob/Fall2021/Lab%201/storyboard.jpg?raw=true)
+
 
 \*\***Summarize feedback you got here.**\*\*
-
+ALl my group members liked the idea and found it useful to get attention of presenter. they also suggested using light flashing inplace of sound so that the presenter is not disturbed while speaking.
 
 ## Part B. Act out the Interaction
 
