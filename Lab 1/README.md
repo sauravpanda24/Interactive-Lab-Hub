@@ -88,11 +88,12 @@ All my group members liked the idea and found it useful to get attention of pres
 
 ## Part B. Act out the Interaction
 
-Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
 
 \*\***Are there things that seemed better on paper than acted out?**\*\*
+Yes, during the prototype, we realized that the number below the hand should either be bigger or should not be present as it isnt that visible.
 
 \*\***Are there new ideas that occur to you or your collaborators that come up from the acting?**\*\*
+Yes, For Lab 2, we were planning to 
 
 
 ## Part C. Prototype the device
