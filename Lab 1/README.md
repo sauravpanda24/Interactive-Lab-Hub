@@ -243,11 +243,12 @@ We wanted to have it easy to use so wanted minimum buttons so that the interacti
 
 \*\***Take a video of your prototyped interaction.**\*\*
 
+Youtube link: https://youtu.be/KcRzjZXhw0s
+
 \*\***Please indicate anyone you collaborated with on this Lab.**\*\*
 
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
 
-Youtube link: https://youtu.be/KcRzjZXhw0s
 
 Credits: Richa Vishwakarma
 
