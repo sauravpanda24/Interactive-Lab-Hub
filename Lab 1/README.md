@@ -152,9 +152,92 @@ You will be assigned three partners from another group. Go to their github pages
 
 ## Make it your own
 
-Do last week’s assignment again, but this time: 
-1) It doesn’t have to (just) use light, 
-2) You can use any modality (e.g., vibration, sound) to prototype the behaviors! Again, be creative!
-3) We will be grading with an emphasis on creativity. 
+## Part A. Plan 
+
+To stage the interaction with your interactive device, think about:
+
+
+\*\***Describe your setting, players, activity and goals here.**\*\*
+
+
+_Setting:_
+This interaction takes place while speaker in participating in video call as well as addressing people in person. For example Professor Wendy in IDD classes.
+
+_Players:_
+The actors involved in this interaction would be the person giving presentation or lecture and other participants joining through zoom call.
+    1. Presenter
+    2. Participants
+
+_Activity:_ 
+Participants want to ask questions to the Presenter, but as presenter has 2 sets of audience its difficult to makeout if there are any questions
+
+_Goals:_ 
+Presenter should be able to notice question on Zoom and accept them.
+
+
+\*\***Include a picture of your storyboard here**\*\*
+
+![alt text](https://github.com/sauravpanda24/Interactive-Lab-Hub/blob/Fall2021/Lab%201/storyboard.jpg?raw=true)
+
+
+\*\***Summarize feedback you got here.**\*\*
+
+All my group members liked the idea and found it useful to get attention of presenter. they also suggested using light flashing inplace of sound so that the presenter is not disturbed while speaking.
+
+## Part B. Act out the Interaction
+
+
+\*\***Are there things that seemed better on paper than acted out?**\*\*
+Yes, during the prototype, we realized that the number below the hand should either be bigger or should not be present as it isnt that visible.
+
+\*\***Are there new ideas that occur to you or your collaborators that come up from the acting?**\*\*
+Yes, For Lab 1 part 2, we are planning to add sound for alert.
+
+
+## Part C. Prototype the device
+
+You will be using your smartphone as a stand-in for the device you are prototyping. You will use the browser of your smart phone to act as a “light” and use a remote control interface to remotely change the light on that device. 
+
+Code for the "Tinkerbelle" tool, and instructions for setting up the server and your phone are [here](https://github.com/FAR-Lab/tinkerbelle).
+
+We invented this tool for this lab! 
+
+If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
+
+\*\***Give us feedback on Tinkerbelle.**\*\*
+
+
+## Part D. Wizard the device
+Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
+
+\*\***Include your first attempts at recording the set-up video here.**\*\*
+https://youtu.be/vmCWINdU2OM
+Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
+
+\*\***Show the follow-up work here.**\*\*
+
+
+## Part E. Costume the device
+
+Only now should you start worrying about what the device should look like. Develop a costume so that you can use your phone as this device.
+
+Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
+
+\*\***Include sketches of what your device might look like here.**\*\*
+![alt text](https://github.com/sauravpanda24/Interactive-Lab-Hub/blob/Fall2021/Lab%201/devicedesign.jpg?raw=true)
+
+\*\*** What concerns or opportunitities are influencing the way you've designed the device to look? **\*\*
+We wanted to have it easy to use so wanted minimum buttons so that the interaction can be quick. we also want a minimilstic display so that we dont spend a lot of resource
+
+## Part F. Record
+
+\*\***Take a video of your prototyped interaction.**\*\*
+
+\*\***Please indicate anyone you collaborated with on this Lab.**\*\*
+Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+https://youtu.be/KcRzjZXhw0s
+
+Credits: Richa Vishwakarma
+
 
 \*\***Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**\*\*
