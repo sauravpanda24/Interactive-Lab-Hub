@@ -90,9 +90,11 @@ All my group members liked the idea and found it useful to get attention of pres
 
 
 \*\***Are there things that seemed better on paper than acted out?**\*\*
+
 Yes, during the prototype, we realized that the number below the hand should either be bigger or should not be present as it isnt that visible.
 
 \*\***Are there new ideas that occur to you or your collaborators that come up from the acting?**\*\*
+
 Yes, For Lab 2, we were planning to 
 
 
@@ -135,6 +137,7 @@ Think about the setting of the device: is the environment a place where the devi
 \*\***Take a video of your prototyped interaction.**\*\*
 
 \*\***Please indicate anyone you collaborated with on this Lab.**\*\*
+
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
 
 
@@ -188,9 +191,11 @@ All my group members liked the idea and found it useful to get attention of pres
 
 
 \*\***Are there things that seemed better on paper than acted out?**\*\*
+
 Yes, during the prototype, we realized that the number below the hand should either be bigger or should not be present as it isnt that visible.
 
 \*\***Are there new ideas that occur to you or your collaborators that come up from the acting?**\*\*
+
 Yes, For Lab 1 part 2, we are planning to add sound for alert.
 
 
@@ -208,9 +213,11 @@ If you run into technical issues with this tool, you can also use a light switch
 
 
 ## Part D. Wizard the device
+
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
 \*\***Include your first attempts at recording the set-up video here.**\*\*
+
 https://youtu.be/vmCWINdU2OM
 Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
 
@@ -224,9 +231,11 @@ Only now should you start worrying about what the device should look like. Devel
 Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
 
 \*\***Include sketches of what your device might look like here.**\*\*
+
 ![alt text](https://github.com/sauravpanda24/Interactive-Lab-Hub/blob/Fall2021/Lab%201/devicedesign.jpg?raw=true)
 
 \*\*** What concerns or opportunitities are influencing the way you've designed the device to look? **\*\*
+
 We wanted to have it easy to use so wanted minimum buttons so that the interaction can be quick. we also want a minimilstic display so that we dont spend a lot of resource
 
 ## Part F. Record
@@ -234,8 +243,10 @@ We wanted to have it easy to use so wanted minimum buttons so that the interacti
 \*\***Take a video of your prototyped interaction.**\*\*
 
 \*\***Please indicate anyone you collaborated with on this Lab.**\*\*
+
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
-https://youtu.be/KcRzjZXhw0s
+
+Youtube link: https://youtu.be/KcRzjZXhw0s
 
 Credits: Richa Vishwakarma
 
