@@ -95,7 +95,6 @@ Yes, during the prototype, we realized that the number below the hand should eit
 
 \*\***Are there new ideas that occur to you or your collaborators that come up from the acting?**\*\*
 
-Yes, For Lab 2, we were planning to 
 
 
 ## Part C. Prototype the device
@@ -210,6 +209,8 @@ We invented this tool for this lab!
 If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
 
 \*\***Give us feedback on Tinkerbelle.**\*\*
+
+Tinkerbell came very handy to do the prototype. I updated the code to create custom html and UI stuff.
 
 
 ## Part D. Wizard the device
