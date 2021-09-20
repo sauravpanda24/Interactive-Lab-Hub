@@ -2,6 +2,7 @@ import time
 import subprocess
 import digitalio
 import board
+import datetime
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
 
@@ -65,7 +66,12 @@ while True:
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
     #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py 
-
+    current_time_str = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    utc_str = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+    y = top
+    draw.text((x, y),"NYC: " + current_time_str, font=font, fill="#FFFFFF")
+    y = top + 50
+    draw.text((x,y), "UTC: " +  utc_str, font=font, fill="#0000FF")
     # Display image.
     disp.image(image, rotation)
-    time.sleep(1)
+    time.sleep(0.5)
