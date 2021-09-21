@@ -190,11 +190,16 @@ After that, Git will ask you to login to your GitHub account to push the updates
 ## Part F. 
 ## Make a short video of your modified barebones PiClock
 
-\*\*\***Take a video of your PiClock.**\*\*\*
+Basic Pi Clock with two timezones: https://youtu.be/2dc_hMpYvXo
+Blinking Pi Clock with image: https://youtu.be/Vmu6rQhUi4g
+Interactive clock: https://youtu.be/SyHEi5C-LUI
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
+- For part 2 I am planning to have a visual analog clock with the weather features: like shows current temprature along with the analog time. This would also have background according to time of the day. on the click of the button.
+Will also add stop watch functionality to the clock to track times.
+  Also use long press for mode setting which can set the time in AM/PM or 24hrs or Analog mode
 
 # Prep for Part 2
 
