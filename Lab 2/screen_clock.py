@@ -5,7 +5,7 @@ import board
 import datetime
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
-
+import numpy as np
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
 cs_pin = digitalio.DigitalInOut(board.CE0)
 dc_pin = digitalio.DigitalInOut(board.D25)
@@ -54,24 +54,40 @@ x = 0
 # Alternatively load a TTF font.  Make sure the .ttf font file is in the
 # same directory as the python script!
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
-font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
+font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 24)
 
 # Turn on the backlight
 backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
-
+image2 = Image.open('day-night.png')
+image2 = image2.convert('RGB')
+image2 = image2.resize((100, 100), Image.BICUBIC)
 while True:
     # Draw a black filled box to clear the image.
+    #image = Image.new("RGB", (width, height))
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
     #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py 
-    current_time_str = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    utc_str = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+    current_time_str = datetime.datetime.now().strftime("%H:%M:%S")
+    utc_str = datetime.datetime.utcnow().strftime("%H:%M:%S")
     y = top
     draw.text((x, y),"NYC: " + current_time_str, font=font, fill="#FFFFFF")
     y = top + 50
     draw.text((x,y), "UTC: " +  utc_str, font=font, fill="#0000FF")
     # Display image.
-    disp.image(image, rotation)
+    #image2 = Image.open('day-night.png')
+    #image2 = image2.convert('RGB')
+    #image2 = image2.resize((100, 100), Image.BICUBIC)
+    #image2 = np.squeeze(np.asarray(image2), axis=2)
+    #print(np.shape(np.asarray(image)))
+    time.sleep(0.4)
+    a = np.zeros((135,240,3))
+    a[35:, 140:,:] = np.asarray(image2)
+    #image = np.asarray(image) + a
+    #print(image.shape)
+    #image = Image.fromarray((image * 255).astype(np.uint8))
+    disp.image(image2, rotation)
     time.sleep(0.5)
+    draw = ImageDraw.Draw(image)
+    disp.image(image, rotation)
