@@ -33,7 +33,7 @@ def read_register(dev, register, n_bytes=1):
 
 # clear out LED lighting settings. For more info https://cdn.sparkfun.com/assets/learn_tutorials/1/1/0/8/Qwiic_Button_I2C_Register_Map.pdf
 write_register(device, 0x1A, 1)
-write_register(device, 0x1B, 0, 2)
+write_register(device, 0x1B, 255)
 write_register(device, 0x19, 0)
 
 

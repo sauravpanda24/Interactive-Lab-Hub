@@ -8,7 +8,7 @@ import busio
 i2c = busio.I2C(board.SCL, board.SDA)
 print("I2C ok!")
 
-REGISTERS = (0, 32)  # Range of registers to read, from the first up to (but
+REGISTERS = (0, 128)  # Range of registers to read, from the first up to (but
                       # not including!) the second value.
  
 REGISTER_SIZE = 2     # Number of bytes to read from each register.
