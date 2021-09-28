@@ -213,8 +213,23 @@ Pull Interactive Lab Hub updates to your repo.
 
 Modify the code from last week's lab to make a new visual interface for your new clock. You may [extend the Pi](Extending%20the%20Pi.md) by adding sensors or buttons, but this is not required.
 
-#### Multimode Clock: https://youtu.be/9HzaepX7_Z0
-#### New Clock.py https://github.com/sauravpanda24/Interactive-Lab-Hub/blob/59dbc409edae81ceebf14b15760ba83d7bd6582e/Lab%202/new_clock.py
+#### System Desing
+The new clock has 4 modes of operation:
+1. Roman clock: shows time in roman numericals
+2. Time for Day change: time left for the next day to start
+3. Normal Clock: shows current NYC and UTC time
+4. Stopwatch: Start a stop a watch to calculate the time.
+
+Top button of LCD =. Button A
+Bottom Buttons of LCD = Button B
+
+Press button A for 3 seconds to change the mode.
+Button B is used to start and stop the time in stopwatch mode ( you can only do it once)
+
+#### Multimode Clock:\
+ https://youtu.be/9HzaepX7_Z0
+#### New Clock.py\
+ https://github.com/sauravpanda24/Interactive-Lab-Hub/blob/59dbc409edae81ceebf14b15760ba83d7bd6582e/Lab%202/new_clock.py
 
 As always, make sure you document contributions and ideas from others explicitly in your writeup.
 
