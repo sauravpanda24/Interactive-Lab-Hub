@@ -213,6 +213,9 @@ Pull Interactive Lab Hub updates to your repo.
 
 Modify the code from last week's lab to make a new visual interface for your new clock. You may [extend the Pi](Extending%20the%20Pi.md) by adding sensors or buttons, but this is not required.
 
+#### Multimode Clock: https://youtu.be/9HzaepX7_Z0
+#### New Clock.py https://github.com/sauravpanda24/Interactive-Lab-Hub/blob/59dbc409edae81ceebf14b15760ba83d7bd6582e/Lab%202/new_clock.py
+
 As always, make sure you document contributions and ideas from others explicitly in your writeup.
 
 You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
