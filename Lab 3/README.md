@@ -71,8 +71,8 @@ In particular, look at `test_words.py` and make sure you understand how the voca
 
 One thing you might need to pay attention to is the audio input setting of Pi. Since you are plugging the USB cable of your webcam to your Pi at the same time to act as speaker, the default input might be set to the webcam microphone, which will not be working for recording.
 
-\*\***Write your own shell file that verbally asks for a numerical based input (such as a phone number, zipcode, number of pets, etc) and records the answer the respondent provides.**\*\*
-
+\*\***Write your own shell file that verbally asks for a numerical based input (such as a phone number, zipcode, number of pets, etc) and records the answer the respondent provides.**\*\*\
+You can find the bash file in `speech2text/ask_zip.sh` and `speech2text/ask_zipcode.py`
 Bonus Activity:
 
 If you are really excited about Speech to Text, you can try out [Mozilla DeepSpeech](https://github.com/mozilla/DeepSpeech) and [voice2json](http://voice2json.org/install.html)
@@ -110,7 +110,7 @@ Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stu
 ![alt text](storyboard3.jpg)
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses. 
 
-\*\***Please describe and document your process.**\*\*
+\*\***Please describe and document your process.**\*\*\
 We first went thorough a hour long discussion on what and how are device should interact. With the available sensors and equipment we plan to do the following:
 1. Greet user good morning and goodbye using servo as hand and voice
 2. Wake user with a custom alram which they can set 
@@ -119,8 +119,10 @@ We first went thorough a hour long discussion on what and how are device should 
 
 Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing.  Please record this interaction (for example, using Zoom's record feature).
 
-\*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
+\*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*\
+
 Video Link: https://youtu.be/TK9HJKQ4zF4
+\
 
 We actually went through our prototype thrice and made updates to our script as we found lot of missing things like:
 How should the device interact with user and how should it put forward all the options.
@@ -130,7 +132,7 @@ We plan to have a voice activated system like alexa, so specific vocabulary is a
 ### Wizarding with the Pi (optional)
 In the [demo directory](./demo), you will find an example Wizard of Oz project. In that project, you can see how audio and sensor data is streamed from the Pi to a wizard controller that runs in the browser.  You may use this demo code as a template. By running the `app.py` script, you can see how audio and sensor data (Adafruit MPU-6050 6-DoF Accel and Gyro Sensor) is streamed from the Pi to a wizard controller that runs in the browser `http://<YouPiIPAddress>:5000`. You can control what the system says from the controller as well!
 
-\*\***Describe if the dialogue seemed different than what you imagined, or when acted out, when it was wizarded, and how.**\*\*
+\*\***Describe if the dialogue seemed different than what you imagined, or when acted out, when it was wizarded, and how.**\*\*\
 We just started with the prototyping and the first issue we realized is that to work like alexa, we need to continously listen to the user input and this needs to be timed with the record time and process time. like if server is processing the audio, the speech command during this interaval cannot be processed and we can loose some data.
 
 Group members: Alexander Kluver (Abk98), Escher Campanella (ec664), Joshua Schmidt (jns223)
