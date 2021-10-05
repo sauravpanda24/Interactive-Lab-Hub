@@ -56,6 +56,11 @@ You can also play audio files directly with `aplay filename`. Try typing `aplay 
 \*\***Write your own shell file to use your favorite of these TTS engines to have your Pi greet you by name.**\*\*
 (This shell file should be saved to your own repo for this lab.)
 
+
+``` 
+larynx -v ljspeech "Hello Saurav! Good Morning!" > output.wav && aplay output.wav
+```
+
 Bonus: If this topic is very exciting to you, you can try out this new TTS system we recently learned about: https://github.com/rhasspy/larynx
 
 ### Speech to Text
@@ -102,22 +107,33 @@ From a remote browser on the same network, check to make sure your webserver is 
 Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stuck? Make a device that talks for dogs. If that is too stupid, find an application that is better than that.) 
 
 \*\***Post your storyboard and diagram here.**\*\*
-
+![alt text](storyboard3.jpg)
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses. 
 
 \*\***Please describe and document your process.**\*\*
-
+We first went thorough a hour long discussion on what and how are device should interact. With the available sensors and equipment we plan to do the following:
+1. Greet user good morning and goodbye using servo as hand and voice
+2. Wake user with a custom alram which they can set 
+3. Suggest user clothes using voice based system (this wont be totally implemented due)
 ### Acting out the dialogue
 
 Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing.  Please record this interaction (for example, using Zoom's record feature).
 
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
+Video Link: https://youtu.be/TK9HJKQ4zF4
+
+We actually went through our prototype thrice and made updates to our script as we found lot of missing things like:
+How should the device interact with user and how should it put forward all the options.
+We also realized that the speech gap needs to be timed based on the question.
+We plan to have a voice activated system like alexa, so specific vocabulary is also needed.
 
 ### Wizarding with the Pi (optional)
 In the [demo directory](./demo), you will find an example Wizard of Oz project. In that project, you can see how audio and sensor data is streamed from the Pi to a wizard controller that runs in the browser.  You may use this demo code as a template. By running the `app.py` script, you can see how audio and sensor data (Adafruit MPU-6050 6-DoF Accel and Gyro Sensor) is streamed from the Pi to a wizard controller that runs in the browser `http://<YouPiIPAddress>:5000`. You can control what the system says from the controller as well!
 
 \*\***Describe if the dialogue seemed different than what you imagined, or when acted out, when it was wizarded, and how.**\*\*
+We just started with the prototyping and the first issue we realized is that to work like alexa, we need to continously listen to the user input and this needs to be timed with the record time and process time. like if server is processing the audio, the speech command during this interaval cannot be processed and we can loose some data.
 
+Group members: Alexander Kluver (Abk98), Escher Campanella (ec664), Joshua Schmidt (jns223)
 # Lab 3 Part 2
 
 For Part 2, you will redesign the interaction with the speech-enabled device using the data collected, as well as feedback from part 1.
