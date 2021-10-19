@@ -175,10 +175,28 @@ Usually, sensors need to positioned in specific locations or orientations to mak
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
 
+Sensor Design 1
+![alt text](img/sensor-1.jpg)
+
+Sensor Design 2
+![alt text](img/sensor-2.jpg)
+
+Sensor Design 3
+![alt text](img/sensor-3.jpg)
+
+Sensor Design 4
+![alt text](img/sensor-4.jpg)
+
+Sensor Design 5
+![alt text](img/sensor-5.jpg)
+
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+
+In some of the prototype design its seems like putting the whole system inside a box with proper asthetics maybe difficult like for touch screen display. The twizllers may hang out. Also its important to makesure they dont touch each other internally. So need to make a robust box which can keep all the connections in place. This is also true for digital tiltmeter as it will need perfect positioning of MPU sensors so that the tilt is shown correctly.
 
 **\*\*\*Pick one of these designs to prototype.\*\*\***
 
+I am planning to prototype the distance sensor for oven along with display and add joystick and MPU sensor for additional functionality to the system
 
 ### Part D
 ### Physical considerations for displaying information and housing parts
@@ -220,15 +238,46 @@ Think about how you want to present the information about what your sensor is se
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
 
+Design 1
+![alt text](img/design-1.jpg)
+
+Design 2
+![alt text](img/design-2.jpg)
+
+Design 3
+![alt text](img/design-3.jpg)
+
+Design 4
+![alt text](img/design-4.jpg)
+
+Design 5
+![alt text](img/design-5.jpg)
+
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
 
+I plan to use design 5 in my system design as it is more compact and screen is at the top which is good considering ovens are usually at much lower level. I want to build an alert/timer system for oven at the house as it does not have this functionality
+
 **\*\*\*Explain the rationale for the design.\*\*\*** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
+
+Yes, because of rpi size and other sensor size, the device has to be bigger than compares to ideal size if we use on board components. Also it needs to be mountable so we need a box shape with ability to latch onto the oven doors.
+
 
 Build a cardbord prototype of your design.
 
 **\*\*\*Document your rough prototype.\*\*\***
+
+I am planning to use Design 5 for my oven based alert system. It uses the follwing components:
+1. Display : To display modes, setting and timer
+2. Joystick: To change modes and set timer
+3. Rotary Encoder: To Control the volume of the device
+4. MPU Sensor: This will be used to make sure that over is properly closed and also to make sure its not open for more than a minute to avoid unwanted mishaps
+5. Buttons and LEDs: They are together so will use them to identify if the process if complete or running
+6. Distance sensor: Usually if you stand too close and open the oven door, there is a big heat wave which comes to your face, to avoid this, you nee to keep some distance
+
+
+![alt text](img/cardboard-design.jpg)
 
 
 LAB PART 2
