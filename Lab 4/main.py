@@ -77,7 +77,7 @@ while True:
     if is_updating:
         all_time = base_time.split(':')
         all_time[current_mode] = "  "
-        text = ':'.joine(all_time)
+        text = ':'.join(all_time)
     else:
         text = base_time
 
