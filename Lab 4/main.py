@@ -77,11 +77,15 @@ while True:
         all_time = base_time.split(':')
         if not c_value:
             all_time[current_mode] = "  "
-        else:
-            all_time[current_mode] = '{:2f}'.format(c_value)
         text = ':'.join(all_time)
     else:
         text = base_time
+
+    if is_updating:
+        all_time = base_time.split(':')
+        if not c_value:
+            all_time[current_mode] = ':2d'.format(c_value)
+        base_time = ':'.join(all_time)
 
     draw_text(text)
 
