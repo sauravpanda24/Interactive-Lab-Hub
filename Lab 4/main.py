@@ -91,7 +91,7 @@ while True:
         last_position = position
         print("Position: {}".format(position))
 
-    if not button.value and not button_held:
+    if not myJoystick.button and not button_held:
         button_held = True
         if current_mode == 0 and is_updating == False:
             is_updating == True
@@ -103,7 +103,7 @@ while True:
 
         print("Button pressed")
 
-    if button.value and button_held:
+    if myJoystick.button and button_held:
         button_held = False
         print("Button released")
     try:
