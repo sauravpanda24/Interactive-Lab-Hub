@@ -74,6 +74,7 @@ myJoystick.begin()
 print("Initialized. Firmware Version: %s" % myJoystick.version)
 
 while True:
+    print("Curren modes:", current_mode, is_updating)
     if is_updating:
         all_time = base_time.split(':')
         all_time[current_mode] = "  "
