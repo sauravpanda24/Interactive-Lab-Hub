@@ -113,5 +113,6 @@ while True:
         myJoystick.vertical, \
         myJoystick.button))
 
-    time.sleep(.5)
+    time.sleep(.3)
     draw_text(base_time)
+    time.sleep(.3)
