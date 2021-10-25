@@ -58,7 +58,7 @@ if seesaw_product != 4991:
 
 seesaw.pin_mode(24, seesaw.INPUT_PULLUP)
 button = digitalio.DigitalIO(seesaw, 24)
-button_held = False
+button_held = True
 is_updating = True
 current_mode = 0
 encoder = rotaryio.IncrementalEncoder(seesaw)
@@ -97,7 +97,7 @@ while True:
             is_updating == True
         else:
             current_mode += 1
-            if current_mode > 3:
+            if current_mode > 2:
                 current_mode = 0
                 is_updating = False
 
