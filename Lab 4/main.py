@@ -86,7 +86,7 @@ while True:
         if not c_value:
             all_time[current_mode] = '{:2d}'.format(c_value)
         base_time = ':'.join(all_time)
-
+    print("Current Base Time: ", base_time)
     draw_text(text)
 
     # negate the position to make clockwise rotation positive
