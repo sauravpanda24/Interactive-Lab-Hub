@@ -5,22 +5,32 @@ from PIL import Image, ImageDraw, ImageFont
 import qwiic
 import time
 from adafruit_seesaw import seesaw, rotaryio, digitalio
+import qwiic_joystick
+import sys
 
+
+def draw_text(text):
+    image = Image.new("1", (oled.width, oled.height))
+    draw = ImageDraw.Draw(image)
+
+    # Draw a white background
+    font = ImageFont.load_default()
+
+    # Draw Some Text
+
+    (font_width, font_height) = font.getsize(text)
+    draw.text(
+        (oled.width // 2 - font_width // 2, oled.height // 2 - font_height // 2),
+        text,
+        font=font,
+        fill=255,
+    )
+    oled.image(image)
+    oled.show()
 
 # Create the I2C interface.
 i2c = busio.I2C(board.SCL, board.SDA)
-
-# Create the SSD1306 OLED class.
-# The first two parameters are the pixel width and pixel height.  Change these
-# to the right size for your display!
 oled = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c)
-
-
-print("VL53L1X Qwiic Test\n")
-ToF = qwiic.QwiicVL53L1X()
-if (ToF.sensor_init() == None):					 # Begin returns 0 on a good init
-	print("Sensor online!\n")
-
 oled.fill(0)
 # we just blanked the framebuffer. to push the framebuffer onto the display, we call show()
 oled.show()
@@ -28,6 +38,13 @@ WIDTH = 128
 HEIGHT = 32  # Change to 64 if needed
 BORDER = 5
 base_time = "00:00:00"
+timer_started = False
+
+
+print("VL53L1X Qwiic Test\n")
+ToF = qwiic.QwiicVL53L1X()
+if (ToF.sensor_init() == None):					 # Begin returns 0 on a good init
+	print("Sensor online!\n")
 
 seesaw = seesaw.Seesaw(board.I2C(), addr=0x36)
 
@@ -39,28 +56,29 @@ if seesaw_product != 4991:
 seesaw.pin_mode(24, seesaw.INPUT_PULLUP)
 button = digitalio.DigitalIO(seesaw, 24)
 button_held = False
-
+is_updating = True
+current_mode = 0
 encoder = rotaryio.IncrementalEncoder(seesaw)
 last_position = None
 
+myJoystick = qwiic_joystick.QwiicJoystick()
+
+if myJoystick.connected == False:
+    print("The Qwiic Joystick device isn't connected to the system. Please check your connection", file=sys.stderr)
+
+myJoystick.begin()
+
+print("Initialized. Firmware Version: %s" % myJoystick.version)
+
 while True:
-    image = Image.new("1", (oled.width, oled.height))
-    draw = ImageDraw.Draw(image)
+    if is_updating:
+        all_time = base_time.split(':')
+        all_time[current_mode] = "  "
+        text = ':'.joine(all_time)
+    else:
+        text = base_time
 
-    # Draw a white background
-    font = ImageFont.load_default()
-
-    # Draw Some Text
-    text = base_time
-    (font_width, font_height) = font.getsize(text)
-    draw.text(
-        (oled.width // 2 - font_width // 2, oled.height // 2 - font_height // 2),
-        text,
-        font=font,
-        fill=255,
-    )
-    oled.image(image)
-    oled.show()
+    draw_text(text)
 
     # negate the position to make clockwise rotation positive
     position = -encoder.position
@@ -90,3 +108,10 @@ while True:
 
     except Exception as e:
         print(e)
+    print("X: %d, Y: %d, Button: %d" % ( \
+        myJoystick.horizontal, \
+        myJoystick.vertical, \
+        myJoystick.button))
+
+    time.sleep(.5)
+    draw_text(base_time)
