@@ -70,11 +70,15 @@ myJoystick.begin()
 
 print("Initialized. Firmware Version: %s" % myJoystick.version)
 
+c_value = 0
 while True:
     print("Curren modes:", current_mode, is_updating)
     if is_updating:
         all_time = base_time.split(':')
-        all_time[current_mode] = "  "
+        if not c_value:
+            all_time[current_mode] = "  "
+        else:
+            all_time[current_mode] = '{:2f}'.format(c_value)
         text = ':'.join(all_time)
     else:
         text = base_time
@@ -96,6 +100,7 @@ while True:
             current_mode += 1
             if current_mode > 2:
                 current_mode = 0
+                c_value = 0
                 is_updating = False
 
         print("Button pressed")
@@ -103,6 +108,20 @@ while True:
     if not myJoystick.button and button_held:
         button_held = False
         print("Button released")
+
+    if myJoystick.vertical < 250:
+        c_value += 1
+        if c_value > 60: c_value = 60
+    if myJoystick.vertical > 750:
+        c_value -= 1
+        if c_value < 0: c_value = 0
+
+    if myJoystick.horizontal > 750:
+        c_value += 1
+        if c_value > 60: c_value = 60
+    if myJoystick.horizontal < 250:
+        c_value -= 1
+        if c_value < 0: c_value = 0
     # try:
     #     ToF.start_ranging()  # Write configuration bytes to initiate measurement
     #     time.sleep(.005)
@@ -122,10 +141,10 @@ while True:
         myJoystick.vertical, \
         myJoystick.button))
 
-    time.sleep(.3)
+    time.sleep(.2)
     if is_updating:
         draw_text(base_time)
-    time.sleep(.3)
-    oled.fill(0)
-    # we just blanked the framebuffer. to push the framebuffer onto the display, we call show()
-    oled.show()
+    time.sleep(.2)
+    # oled.fill(0)
+    # # we just blanked the framebuffer. to push the framebuffer onto the display, we call show()
+    # oled.show()
