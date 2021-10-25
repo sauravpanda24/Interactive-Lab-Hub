@@ -10,6 +10,9 @@ import sys
 
 
 def draw_text(text):
+    oled.fill(0)
+    # we just blanked the framebuffer. to push the framebuffer onto the display, we call show()
+    oled.show()
     image = Image.new("1", (oled.width, oled.height))
     draw = ImageDraw.Draw(image)
 
