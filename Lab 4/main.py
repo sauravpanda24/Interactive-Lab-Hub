@@ -84,7 +84,7 @@ while True:
     if is_updating:
         all_time = base_time.split(':')
         if not c_value:
-            all_time[current_mode] = '{:2d}'.format(c_value)
+            all_time[current_mode] = '{:2.0f}'.format(c_value)
         base_time = ':'.join(all_time)
     print("Current Base Time: ", base_time)
     draw_text(text)
