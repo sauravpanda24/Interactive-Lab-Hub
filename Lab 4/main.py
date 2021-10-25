@@ -91,7 +91,7 @@ while True:
         last_position = position
         print("Position: {}".format(position))
 
-    if not myJoystick.button and not button_held:
+    if myJoystick.button and not button_held:
         button_held = True
         if current_mode == 0 and is_updating == False:
             is_updating == True
@@ -103,23 +103,23 @@ while True:
 
         print("Button pressed")
 
-    if myJoystick.button and button_held:
+    if not myJoystick.button and button_held:
         button_held = False
         print("Button released")
-    try:
-        ToF.start_ranging()  # Write configuration bytes to initiate measurement
-        time.sleep(.005)
-        distance = ToF.get_distance()  # Get the result of the measurement from the sensor
-        time.sleep(.005)
-        ToF.stop_ranging()
-
-        distanceInches = distance / 25.4
-        distanceFeet = distanceInches / 12.0
-
-        print("Distance(mm): %s Distance(ft): %s" % (distance, distanceFeet))
-
-    except Exception as e:
-        print(e)
+    # try:
+    #     ToF.start_ranging()  # Write configuration bytes to initiate measurement
+    #     time.sleep(.005)
+    #     distance = ToF.get_distance()  # Get the result of the measurement from the sensor
+    #     time.sleep(.005)
+    #     ToF.stop_ranging()
+    #
+    #     distanceInches = distance / 25.4
+    #     distanceFeet = distanceInches / 12.0
+    #
+    #     print("Distance(mm): %s Distance(ft): %s" % (distance, distanceFeet))
+    #
+    # except Exception as e:
+    #     print(e)
     print("X: %d, Y: %d, Button: %d" % ( \
         myJoystick.horizontal, \
         myJoystick.vertical, \
