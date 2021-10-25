@@ -92,6 +92,14 @@ while True:
 
     if not button.value and not button_held:
         button_held = True
+        if current_mode == 0 and is_updating == False:
+            is_updating == True
+        else:
+            current_mode += 1
+            if current_mode > 3:
+                current_mode = 0
+                is_updating = False
+
         print("Button pressed")
 
     if button.value and button_held:
@@ -117,5 +125,6 @@ while True:
         myJoystick.button))
 
     time.sleep(.3)
-    draw_text(base_time)
+    if is_updating:
+        draw_text(base_time)
     time.sleep(.3)
