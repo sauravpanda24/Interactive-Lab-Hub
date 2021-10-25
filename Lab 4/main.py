@@ -1,9 +1,9 @@
 import board
 import busio
 import adafruit_ssd1306
-from adafruit_apds9960.apds9960 import APDS9960
 from PIL import Image, ImageDraw, ImageFont
-
+import qwiic
+import time
 
 # Create the I2C interface.
 i2c = busio.I2C(board.SCL, board.SDA)
@@ -13,10 +13,12 @@ i2c = busio.I2C(board.SCL, board.SDA)
 # to the right size for your display!
 oled = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c)
 
-i2c = board.I2C()
-apds = APDS9960(i2c)
 
-apds.enable_proximity = True
+print("VL53L1X Qwiic Test\n")
+ToF = qwiic.QwiicVL53L1X()
+if (ToF.sensor_init() == None):					 # Begin returns 0 on a good init
+	print("Sensor online!\n")
+
 oled.fill(0)
 # we just blanked the framebuffer. to push the framebuffer onto the display, we call show()
 oled.show()
@@ -42,3 +44,17 @@ while True:
     )
     oled.image(image)
     oled.show()
+    try:
+        ToF.start_ranging()  # Write configuration bytes to initiate measurement
+        time.sleep(.005)
+        distance = ToF.get_distance()  # Get the result of the measurement from the sensor
+        time.sleep(.005)
+        ToF.stop_ranging()
+
+        distanceInches = distance / 25.4
+        distanceFeet = distanceInches / 12.0
+
+        print("Distance(mm): %s Distance(ft): %s" % (distance, distanceFeet))
+
+    except Exception as e:
+        print(e)
