@@ -323,3 +323,40 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 * "Works like": shows what the device can do
 * "Acts like": shows how a person would interact with the device
 
+
+#### Idea:
+In Oven at thehouse studio apartment, there is no timer attached to oven, due to which we usually lose time. To solve this
+I am building a device which can set timer and alert the user when the times up. It will also help user keep safe distance while opening the oven 
+
+#### Usage:
+1. Set the timer using the joystick. On click of joystick the hr is editable, you can move up to increase the hour timer or move down to decrease the hour timer. You can also use horizontal axis where right is to increase and left is for decreasing.
+2. Click on the joystick to edit minutes and similary edit seconds
+3. After editing minutes, click on joystick again and then click on red button to start timer.
+4. WHen timer ends, the system start speaking. If you are closer than 2 ft it alerts you to keep 2ft distnace before opening oven door.
+5. you can also use roatry encoder to increase or decrease volume.
+
+
+
+#### Prototype:
+![alt text](img/img1.jpeg)
+![alt text](img/img2.jpeg)
+
+#### Update:
+Based on suggestion from May, I removed the motion sensor as it would overload the system and it didnt have any concrete usage. I also removed one button as the system wouldnt recognize the two buttons as unique buttons. 
+
+* "Looks like": a boxy system with timer 
+* "Works like": Work like a clock based alarm system
+* "Acts like": Acts like an alarm clock with volume change feature
+#### Script:
+Lab 4/main.py contains all the code for this app
+#### Demo:
+
+https://youtu.be/4u7iWs8gm2M
+
+#### Test:\
+https://youtu.be/ys0Gd7zGMTw
+
+I tested this device with help of my neighbour. One of the major issue is that the joystick doesnt have any support inside the box so you need to hold it from behind to click the button. User was also confused regarding hte messages and volume was comparatively low for them.
+
+### Credits:
+Shang-Yi, May Olatoye
