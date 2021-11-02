@@ -212,21 +212,41 @@ Try out different interaction outputs and inputs.
 
 **\*\*\*Describe and detail the interaction, as well as your experimentation here.\*\*\***
 
+The model chosen was Teachable machines due to its flexibility with training for multiple modalities such as images and sound. The initial class of objects chosen were water bottles. The initial interaction involved training and classifying two different kinds of water bottles. The training on teachable machines algorithm is done over 50 images of each class and this task is time consuming if we want to extend this to multiple classes. This prediction was really accurate given same background and contrasting colors of water bottle. Also we did not include a class for the background. So the no background image was classifies as no bottle.
+Also the accuracy of the classification reduced when the lighting was changed.
+<img width="544" alt="Screen Shot 2021-11-01 at 11 09 46 PM" src="https://user-images.githubusercontent.com/64258179/139783267-d83a4b8d-edac-4e3d-aa77-c3980e254b7d.png">
+<img width="544" alt="Screen Shot 2021-11-01 at 11 10 06 PM" src="https://user-images.githubusercontent.com/64258179/139783459-f7023bb4-7cc6-4971-9890-b82a3a94ed72.png">
+
+We extended this idea towards the game of rock paper scisscors. The game was experimeted on both mediapipe and teachable machines and teachable machines was better at classifying the images discretely unlike media pipe which proved to be a better model for varying parameters and using image/video for controlling different parameters. As suggested above we also included a background class which made the entire interaction more realistic.
+<img width="303" alt="Screen Shot 2021-11-01 at 11 32 44 PM" src="https://user-images.githubusercontent.com/64258179/139783488-46b013e6-fdb8-4e23-ae0d-f9cf3143bc59.png">
+<img width="303" alt="Screen Shot 2021-11-01 at 11 33 04 PM" src="https://user-images.githubusercontent.com/64258179/139783520-0beb6d58-1bde-4773-a4d3-7607661e57a8.png">
+<img width="303" alt="Screen Shot 2021-11-01 at 11 33 14 PM" src="https://user-images.githubusercontent.com/64258179/139783525-68d08f42-8aaf-4893-a2dc-5cba8828b805.png">
+<img width="303" alt="Screen Shot 2021-11-01 at 11 33 23 PM" src="https://user-images.githubusercontent.com/64258179/139783534-31b4b045-290d-4e4e-b6d0-402ac64fff28.png">
+
 ### Part C
-### Test the interaction prototype
+### Test the inte
+raction prototype
 
 Now flight test your interactive prototype and **note down your observations**:
 For example:
 1. When does it what it is supposed to do?
-1. When does it fail?
-1. When it fails, why does it fail?
-1. Based on the behavior you have seen, what other scenarios could cause problems?
+   The model behaves is it sis supposed to when the image to be predicted shares most of its characteristics from the training dataset
+2. When does it fail?
+   The model prediction fails due to change in the extermal surroundings such as background and lighting. It also fails when the orientation and position of the object to be predicted is varied.
+3. When it fails, why does it fail?
+   The interaction mostly fails when the testing image doesnt match the images in the training dataset. Therefore, it is essential to include a varied dataset which incorporate all the scenarios from realword capturing of the dataset. 
+4. Based on the behavior you have seen, what other scenarios could cause problems?
+   Other scenarios which could cause problems are having two classes of data on the same image. Also since we are using hand gestures for the game, the difference in skintones of plyers could also cause problems ij prediction.
 
 **\*\*\*Think about someone using the system. Describe how you think this will work.\*\*\***
 1. Are they aware of the uncertainties in the system?
-1. How bad would they be impacted by a miss classification?
-1. How could change your interactive system to address this?
-1. Are there optimizations you can try to do on your sense-making algorithm.
+   The users are ususally not aware of the unceratainities and edge cases of the system since they're mostly not aware of the working of the system. 
+2. How bad would they be impacted by a miss classification?
+   Since we are trying to simulate a ame here, they would be impacted badly due to a misclassification as users tend to be competitve and a misclassification would ruin their experience. The impact and stakes could be bigger in a more immersive version of the game.
+3. How could change your interactive system to address this?
+   The inetractive system could be changed by displaying the desired setting for the input to the user. Also we could do this improving the acccuracy of prediction by making the training model more robust by inlcudin more images in the training data.
+4. Are there optimizations you can try to do on your sense-making algorithm.
+   We could optimise the sense making algorithms by trying other machine learbig models for classification and saving the artefcts of the best performing model. Also we coud work on other optimization techniques such as monte carlo croos validation for non linear modelling.
 
 ### Part D
 ### Characterize your own Observant system
