@@ -100,6 +100,16 @@ pi@ixe00:~/openCV-examples/object-detection $ python detect.py
 
 **\*\*\*Try each of the following four examples in the `openCV-examples`, include screenshots of your use and write about one design for each example that might work based on the individual benefits to each algorithm.\*\*\***
 
+![alt text](img/contour_detection.png)
+
+![alt text](img/face_detection.png)
+
+
+![alt text](img/flow_detection.png)
+
+
+![alt text](img/object_detection.png)
+
 #### MediaPipe
 
 A more recent open source and efficient method of extracting information from video streams comes out of Google's [MediaPipe](https://mediapipe.dev/), which offers state of the art face, face mesh, hand pose, and body pose detection.
@@ -139,6 +149,8 @@ Try the two main features of this script: 1) pinching for percentage control, an
 (You might also consider how this notion of percentage control with hand tracking might be used in some of the physical UI you may have experimented with in the last lab, for instance in controlling a servo or rotary encoder.)
 
 
+We plan to use hand detection to identify if user makes scissor, rock or paper sign
+
 
 #### Teachable Machines
 Google's [TeachableMachines](https://teachablemachine.withgoogle.com/train) might look very simple. However, its simplicity is very useful for experimenting with the capabilities of this technology.
@@ -171,6 +183,7 @@ This might take a while to get fully installed. After installation, connect your
 (**Optionally**: You can train your own model, too. First, visit [TeachableMachines](https://teachablemachine.withgoogle.com/train), select Image Project and Standard model. Second, use the webcam on your computer to train a model. For each class try to have over 50 samples, and consider adding a background class where you have nothing in view so the model is trained to know that this is the background. Then create classes based on what you want the model to classify. Lastly, preview and iterate, or export your model as a 'Tensorflow' model, and select 'Keras'. You will find an '.h5' file and a 'labels.txt' file. These are included in this labs 'teachable_machines' folder, to make the PPE model you used earlier. You can make your own folder or replace these to make your own classifier.)
 
 **\*\*\*Whether you make your own model or not, include screenshots of your use of Teachable Machines, and write how you might use this to create your own classifier. Include what different affordances this method brings, compared to the OpenCV or MediaPipe options.\*\*\***
+
 
 
 *Don't forget to run ```deactivate``` to end the Teachable Machines demo, and to reactivate with ```source tmachine/bin/activate``` when you want to use it again.*
@@ -220,15 +233,47 @@ For example:
 
 Now that you have experimented with one or more of these sense-making systems **characterize their behavior**.
 During the lecture, we mentioned questions to help characterize a material:
+
+Goal: To create an rock paper sisscor gaming interaction. 
+
 * What can you use X for?
+  
+  This interaction can be used to improve your rock paper siscor skills.
+  
+
 * What is a good environment for X?
+
+    We need a plain background with minimum movement  
+
+
 * What is a bad environment for X?
+
+    A public place like cafe will be a bad envioorment for this game.
+
+
 * When will X break?
+
+    When multiple people try to intract with the game. Currently this interaction is meant to be with only one person  
+
+
 * When it breaks how will X break?
+
+    It may start giving wrong user selection. Like user may have selected scissor but in background someone hand maybe is shape of rock and system may get confused.  
+
+
 * What are other properties/behaviors of X?
+
+    It will show a message on screen indicating the users and computers choice and who won that round.
+  
+
 * How does X feel?
 
+    X feels fun to interact with and has a feedback if user loses or wins.
+
+
 **\*\*\*Include a short video demonstrating the answers to these questions.\*\*\***
+
+
 
 ### Part 2.
 
